@@ -1,9 +1,11 @@
 package com.example.orderproject.users;
 
+import com.example.orderproject.databases.UserDB;
 import com.example.orderproject.users.dtos.CreateUserDTO;
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.server.LocalServerPort;
 
@@ -13,18 +15,22 @@ class UserControllerTest {
 
     @LocalServerPort
     private int port;
+    @Autowired
+    private UserDB userDB;
 
     @BeforeEach
     void setUp() {
         RestAssured.port = port;
+        userDB.reset();
     }
 
     @Test
-    void createUserWithCorrectDTO_returnsCreated() throws Exception {
+    void createBasicUserWithCorrectDTO_returnsCreated() throws Exception {
+
         CreateUserDTO createUserDTO = new CreateUserDTO(
                 "Ciccio",
-                "Magnotta",
-                "ciccio.magnotta@gmail.com",
+                "Pignatta",
+                "ciccio.andreatta@gmail.com",
                 "ciao123",
                 new Address(
                         "Via Vai",
@@ -50,10 +56,41 @@ class UserControllerTest {
     }
 
     @Test
-    void createUserWithMissingEmail_returnsBadRequest() throws Exception {
+    void createBasicUserWithExistingEmail_returns401() throws Exception {
+
         CreateUserDTO createUserDTO = new CreateUserDTO(
                 "Ciccio",
-                "Magnotta",
+                "Pignatta",
+                "ciccio.magnotta@gmail.com",
+                "ciao123",
+                new Address(
+                        "Via Vai",
+                        23,
+                        "Caserta",
+                        "Italy",
+                        "81100"
+                ),
+                new PhoneNumber(
+                        "39",
+                        "347272924"
+                )
+        );
+
+        RestAssured
+                .given()
+                .contentType("application/json")
+                .body(createUserDTO)
+                .when()
+                .post("/users")
+                .then()
+                .statusCode(409);
+    }
+
+    @Test
+    void createBasicUserWithMissingEmail_returnsBadRequest() throws Exception {
+        CreateUserDTO createUserDTO = new CreateUserDTO(
+                "Ciccio",
+                "Pignatta",
                 "",
                 "ciao123",
                 new Address(
@@ -80,10 +117,10 @@ class UserControllerTest {
     }
 
     @Test
-    void createUserWithWrongEmail_returnsBadRequest() throws Exception {
+    void createBasicUserWithWrongEmail_returnsBadRequest() throws Exception {
         CreateUserDTO createUserDTO = new CreateUserDTO(
                 "Ciccio",
-                "Magnotta",
+                "Pignatta",
                 "ciccio.magnotta",
                 "ciao123",
                 new Address(
@@ -110,11 +147,11 @@ class UserControllerTest {
     }
 
     @Test
-    void createUserWithMissingFirstnameAndLastname_returnsCreated() throws Exception {
+    void createBasicUserWithMissingFirstnameAndLastname_returnsCreated() throws Exception {
         CreateUserDTO createUserDTO = new CreateUserDTO(
                 "",
                 "",
-                "ciccio.magnotta@gmail.com",
+                "ciccio.andreatta@gmail.com",
                 "ciao123",
                 new Address(
                         "Via Vai",
@@ -140,11 +177,11 @@ class UserControllerTest {
     }
 
     @Test
-    void createUserWithWrongPhoneNumberFormat_returnsBadRequest() throws Exception {
+    void createBasicUserWithWrongPhoneNumberFormat_returnsBadRequest() throws Exception {
         CreateUserDTO createUserDTO = new CreateUserDTO(
                 "",
                 "",
-                "ciccio.magnotta@gmail.com",
+                "ciccio.andreatta@gmail.com",
                 "ciao123",
                 new Address(
                         "Via Vai",
@@ -170,11 +207,11 @@ class UserControllerTest {
     }
 
     @Test
-    void createUserWithMissingZipCode_returnsBadRequest() throws Exception {
+    void createBasicUserWithMissingZipCode_returnsBadRequest() throws Exception {
         CreateUserDTO createUserDTO = new CreateUserDTO(
                 "",
                 "",
-                "ciccio.magnotta@gmail.com",
+                "ciccio.andreatta@gmail.com",
                 "ciao123",
                 new Address(
                         "Via Vai",
@@ -200,11 +237,11 @@ class UserControllerTest {
     }
 
     @Test
-    void createUserWithMissingCity_returnsBadRequest() throws Exception {
+    void createBasicUserWithMissingCity_returnsBadRequest() throws Exception {
         CreateUserDTO createUserDTO = new CreateUserDTO(
                 "",
                 "",
-                "ciccio.magnotta@gmail.com",
+                "ciccio.andreatta@gmail.com",
                 "ciao123",
                 new Address(
                         "Via Vai",
@@ -230,11 +267,11 @@ class UserControllerTest {
     }
 
     @Test
-    void createUserWithMissingAllNotNecessaryFields_returnsCreated() throws Exception {
+    void createBasicUserWithMissingAllNotNecessaryFields_returnsCreated() throws Exception {
         CreateUserDTO createUserDTO = new CreateUserDTO(
                 "",
                 "",
-                "ciccio.magnotta@gmail.com",
+                "ciccio.andreatta@gmail.com",
                 "ciao123",
                 new Address(
                         "",

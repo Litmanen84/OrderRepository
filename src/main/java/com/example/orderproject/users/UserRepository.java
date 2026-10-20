@@ -1,18 +1,27 @@
 package com.example.orderproject.users;
 
-import com.example.orderproject.db.UserDB;
+import com.example.orderproject.databases.UserDB;
 import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
 
 @Repository
 public class UserRepository {
-    private final UserDB db;
+    private final UserDB userDB;
 
-    public UserRepository(UserDB db) {
-        this.db = db;
+    public UserRepository(UserDB userDB) {
+        this.userDB = userDB;
     }
 
-    public void createUser(User user) {
-        db.save(user);
+    public void createUser(BasicUser basicUser) {
+        userDB.save(basicUser);
     }
 
+    public Optional<User> getUserByEmail(String email){
+        return userDB.getUserByEmail(email);
+    }
+
+    public boolean checkEmailIsUnique(String email) {
+        return userDB.checkEmailIsUnique(email);
+    }
 }

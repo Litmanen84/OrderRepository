@@ -69,7 +69,7 @@ of stories: **Must-Have's** and **Nice-To-Have's**. Start with the Must-Have's, 
 The functional requirements are written down as stories. 
 
 ### Story 1: Create a customer account
-As an unregistered user I want to create a customer account so I can become recognized within the system.
+As an unregistered basicUser I want to create a customer account so I can become recognized within the system.
 - Upon creation of a customer, the following data should be provided:
     - First name
     - Last name
@@ -78,7 +78,7 @@ As an unregistered user I want to create a customer account so I can become reco
     - Phone number
 
 ### Story 2: Add an item
-As an admin user I want to add an item so I can expand the list of available items.
+As an admin basicUser I want to add an item so I can expand the list of available items.
 - When adding an `Item`, the following data should be provided
     - Name
     - Description
@@ -98,7 +98,7 @@ As a customer I want to order one or more items.
 - Obviously, we also need to keep track of who made the order (it has to be a known customer)
 
 ### Story 4: Update an item
-As an admin user I want to update an item so I can keep my list of available items up to date.
+As an admin basicUser I want to update an item so I can keep my list of available items up to date.
 - When updating an Item, the following data should be provided
     - Name
     - Description
@@ -123,22 +123,22 @@ As a customer I want to be able to reorder an existing order so I can quickly pl
 - The actual price of the item should be used, not the price the item had in the existing order.
 
 ### Story 7: View all customers
-As an admin user I want to view all customers.
+As an admin basicUser I want to view all customers.
 - List all customers known by the system
 
 ### Story 8: View a single customer
-As an admin user I want to view the details of a single customers.
+As an admin basicUser I want to view the details of a single customers.
 - Based on the customer identifier
 
 ### Story 9: Items Shipping today
-As an admin user I want to view all orders that contain items that should be shipped today.
+As an admin basicUser I want to view all orders that contain items that should be shipped today.
 - List the item groups that should be shipped today.
 - Give the address where they should be shipped to. 
 - Note: item groups of the same order can have a different shipping date, 
 but all items are shipped to the same address.
 
 ### Story 10: Item overview
-As an admin user I want to have an overview of items and their stock resupply urgency so I can resupply items in a timely matter.
+As an admin basicUser I want to have an overview of items and their stock resupply urgency so I can resupply items in a timely matter.
 - To indicate the urgency of stock resupply we need to use a very business specific urgency indicator.
 - There are 3 different levels for the urgency indicator:
     - STOCK_LOW
