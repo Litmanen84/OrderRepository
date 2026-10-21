@@ -22,5 +22,4 @@ public class ItemService {
         Item itemsToCreate = mapper.fromCreateItemDtoToItem(items);
         repo.createItems(itemsToCreate);
     }
-
 }

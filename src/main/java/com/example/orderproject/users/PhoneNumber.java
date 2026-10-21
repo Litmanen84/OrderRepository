@@ -1,10 +1,10 @@
 package com.example.orderproject.users;
 
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.*;
 
 public class PhoneNumber {
     @NotBlank
+    @Size(min = 2, max = 3)
     @Pattern(
             regexp = "^[0-9]+$",
             message = "Prefix must have only numbers"
@@ -15,6 +15,7 @@ public class PhoneNumber {
             regexp = "^[0-9]+$",
             message = "Phone number must have only numbers"
     )
+    @Size(min = 6, max = 9)
     private String number;
 
     public PhoneNumber(String prefix, String number) {

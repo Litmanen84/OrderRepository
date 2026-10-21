@@ -4,7 +4,7 @@ import java.util.List;
 
 public enum Role {
     USER("User", List.of(Feature.BASIC_ACCESS)),
-    ADMIN("Admin", List.of(Feature.BASIC_ACCESS, Feature.ADD_ITEM));
+    ADMIN("Admin", List.of(Feature.BASIC_ACCESS, Feature.ADD_ITEM, Feature.SEE_ALL_USERS, Feature.SEE_USER_DETAILS));
 
     private String role;
     private List<Feature> features;
@@ -12,6 +12,10 @@ public enum Role {
     Role(String role, List<Feature> features) {
         this.role = role;
         this.features = features;
+    }
+
+    public String getRole() {
+        return role;
     }
 
     public boolean hasFeature(Feature feature) {

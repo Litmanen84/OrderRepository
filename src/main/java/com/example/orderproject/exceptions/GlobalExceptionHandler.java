@@ -35,6 +35,13 @@ public class GlobalExceptionHandler {
                 .body(Map.of("message", exception.getMessage()));
     }
 
+    @ExceptionHandler(UserNotFoundException.class)
+    public ResponseEntity<Map<String, Object>> handleUserNotFoundException(UserNotFoundException exception) {
+        log.warn("User not found: {}", exception.getMessage());
+        return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                .body(Map.of("message", exception.getMessage()));
+    }
+
 
     @ExceptionHandler(ItemAlreadyExistsException.class)
     public ResponseEntity<Map<String, Object>> handleItemAlreadyExistsException(ItemAlreadyExistsException exception) {

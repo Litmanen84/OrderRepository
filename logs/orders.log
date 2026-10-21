@@ -1,148 +1,329 @@
-2026-10-20T16:55:25.207+02:00  INFO 10868 --- [OrderProject] [main] c.e.o.items.ItemControllerTest           : Starting ItemControllerTest using Java 25.0.4.1 with PID 10868 (started by pfusco in C:\Users\pfusco\Downloads\Projects\OrderProject)
-2026-10-20T16:55:25.209+02:00  INFO 10868 --- [OrderProject] [main] c.e.o.items.ItemControllerTest           : No active profile set, falling back to 1 default profile: "default"
-2026-10-20T16:55:27.393+02:00  INFO 10868 --- [OrderProject] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 0 (http)
-2026-10-20T16:55:27.415+02:00  INFO 10868 --- [OrderProject] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-10-20T16:55:27.416+02:00  INFO 10868 --- [OrderProject] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
-2026-10-20T16:55:27.486+02:00  INFO 10868 --- [OrderProject] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1833 ms
-2026-10-20T16:55:28.332+02:00  INFO 10868 --- [OrderProject] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 59627 (http) with context path '/'
-2026-10-20T16:55:28.339+02:00  INFO 10868 --- [OrderProject] [main] c.e.o.items.ItemControllerTest           : Started ItemControllerTest in 3.718 seconds (process running for 8.548)
-2026-10-20T16:55:28.343+02:00  WARN 10868 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
-2026-10-20T16:55:28.344+02:00  WARN 10868 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
-2026-10-20T16:55:29.770+02:00  INFO 10868 --- [OrderProject] [http-nio-auto-1-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-10-20T16:55:29.771+02:00  INFO 10868 --- [OrderProject] [http-nio-auto-1-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-10-20T16:55:29.774+02:00  INFO 10868 --- [OrderProject] [http-nio-auto-1-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2026-10-20T16:55:29.928+02:00  WARN 10868 --- [OrderProject] [http-nio-auto-1-exec-2] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{message=must not be blank, field=name}]
-2026-10-20T16:55:30.070+02:00  WARN 10868 --- [OrderProject] [http-nio-auto-1-exec-8] c.e.o.exceptions.GlobalExceptionHandler  : Unauthorized request
-2026-10-20T16:55:30.112+02:00  INFO 10868 --- [OrderProject] [http-nio-auto-1-exec-3] c.example.orderproject.databases.UserDB  : Item saved: com.example.orderproject.items.Item@47675403
-2026-10-20T16:55:30.153+02:00  WARN 10868 --- [OrderProject] [http-nio-auto-1-exec-4] c.e.o.exceptions.GlobalExceptionHandler  : Unauthorized request
-2026-10-20T16:55:30.166+02:00  INFO 10868 --- [OrderProject] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.orderproject.users.UserControllerTest]: UserControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-10-20T16:55:30.183+02:00  INFO 10868 --- [OrderProject] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.orderproject.OrderProjectApplication for test class com.example.orderproject.users.UserControllerTest
-2026-10-20T16:55:30.185+02:00  INFO 10868 --- [OrderProject] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.orderproject.users.UserControllerTest]: UserControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-10-20T16:55:30.188+02:00  INFO 10868 --- [OrderProject] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.orderproject.OrderProjectApplication for test class com.example.orderproject.users.UserControllerTest
-2026-10-20T16:55:30.249+02:00  WARN 10868 --- [OrderProject] [http-nio-auto-1-exec-5] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{message=must not be blank, field=email}, {message=Email must have the form x@x.x using only letters and numbers, field=email}]
-2026-10-20T16:55:30.300+02:00  INFO 10868 --- [OrderProject] [http-nio-auto-1-exec-7] c.example.orderproject.databases.UserDB  : User saved: com.example.orderproject.users.BasicUser@27a1fffa
-2026-10-20T16:55:30.332+02:00  WARN 10868 --- [OrderProject] [http-nio-auto-1-exec-6] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{message=must not be blank, field=address.zipcode}]
-2026-10-20T16:55:30.363+02:00  WARN 10868 --- [OrderProject] [http-nio-auto-1-exec-1] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{message=must not be blank, field=address.city}]
-2026-10-20T16:55:30.397+02:00  WARN 10868 --- [OrderProject] [http-nio-auto-1-exec-9] c.e.orderproject.users.UserController    : Email already exists
-2026-10-20T16:55:30.398+02:00 ERROR 10868 --- [OrderProject] [http-nio-auto-1-exec-9] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: Email already exists] with root cause
+2026-10-21T10:25:31.174+02:00  WARN 20432 --- [OrderProject] [main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'itemController' defined in file [C:\Users\pfusco\Downloads\Projects\OrderProject\target\classes\com\example\orderproject\items\ItemController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'securityService' defined in file [C:\Users\pfusco\Downloads\Projects\OrderProject\target\classes\com\example\orderproject\security\SecurityService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'userService' defined in file [C:\Users\pfusco\Downloads\Projects\OrderProject\target\classes\com\example\orderproject\users\UserService.class]: Unsatisfied dependency expressed through constructor parameter 2: Error creating bean with name 'securityService': Requested bean is currently in creation: Is there an unresolvable circular reference or an asynchronous initialization dependency?
+2026-10-21T10:25:31.233+02:00 ERROR 20432 --- [OrderProject] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
 
-java.lang.IllegalArgumentException: Email already exists
-	at com.example.orderproject.users.UserController.createBasicUser(UserController.java:27) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.9.jar:7.0.9]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.9.jar:7.0.9]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.9.jar:7.0.9]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.9.jar:7.0.9]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.9.jar:7.0.9]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.9.jar:7.0.9]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.9.jar:7.0.9]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.9.jar:7.0.9]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.9.jar:7.0.9]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903) ~[spring-webmvc-7.0.9.jar:7.0.9]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649) ~[tomcat-embed-core-11.0.24.jar:6.1]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.9.jar:7.0.9]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.24.jar:6.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:59) ~[tomcat-embed-websocket-11.0.24.jar:11.0.24]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.9.jar:7.0.9]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.9.jar:7.0.9]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.9.jar:7.0.9]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:535) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:406) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1307) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2036) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:949) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:483) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
-	at java.base/java.lang.Thread.run(Thread.java:1474) ~[na:na]
+***************************
+APPLICATION FAILED TO START
+***************************
 
-2026-10-20T16:55:30.478+02:00  INFO 10868 --- [OrderProject] [http-nio-auto-1-exec-10] c.example.orderproject.databases.UserDB  : User saved: com.example.orderproject.users.BasicUser@6907eb7c
-2026-10-20T16:55:30.509+02:00  WARN 10868 --- [OrderProject] [http-nio-auto-1-exec-2] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{message=Prefix must have only numbers, field=phoneNumber.prefix}]
-2026-10-20T16:55:30.538+02:00  INFO 10868 --- [OrderProject] [http-nio-auto-1-exec-8] c.example.orderproject.databases.UserDB  : User saved: com.example.orderproject.users.BasicUser@196f10cc
-2026-10-20T16:55:30.563+02:00  WARN 10868 --- [OrderProject] [http-nio-auto-1-exec-3] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{message=Email must have the form x@x.x using only letters and numbers, field=email}, {message=must be a well-formed email address, field=email}]
-2026-10-20T16:55:30.574+02:00  INFO 10868 --- [OrderProject] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.orderproject.OrderProjectApplicationTests]: OrderProjectApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-10-20T16:55:30.584+02:00  INFO 10868 --- [OrderProject] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.orderproject.OrderProjectApplication for test class com.example.orderproject.OrderProjectApplicationTests
-2026-10-20T16:55:30.585+02:00  INFO 10868 --- [OrderProject] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.orderproject.OrderProjectApplicationTests]: OrderProjectApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-10-20T16:55:30.587+02:00  INFO 10868 --- [OrderProject] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.orderproject.OrderProjectApplication for test class com.example.orderproject.OrderProjectApplicationTests
-2026-10-20T16:55:30.637+02:00  INFO 10868 --- [OrderProject] [main] c.e.o.OrderProjectApplicationTests       : Starting OrderProjectApplicationTests using Java 25.0.4.1 with PID 10868 (started by pfusco in C:\Users\pfusco\Downloads\Projects\OrderProject)
-2026-10-20T16:55:30.638+02:00  INFO 10868 --- [OrderProject] [main] c.e.o.OrderProjectApplicationTests       : No active profile set, falling back to 1 default profile: "default"
-2026-10-20T16:55:31.004+02:00  INFO 10868 --- [OrderProject] [main] c.e.o.OrderProjectApplicationTests       : Started OrderProjectApplicationTests in 0.407 seconds (process running for 11.214)
-2026-10-20T16:55:31.005+02:00  WARN 10868 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
-2026-10-20T16:55:31.006+02:00  WARN 10868 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
-2026-10-20T16:55:31.038+02:00  INFO 10868 --- [OrderProject] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-10-20T16:55:31.046+02:00  INFO 10868 --- [OrderProject] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-10-20T17:01:34.854+02:00  INFO 5756 --- [OrderProject] [main] c.e.o.users.UserControllerTest           : Starting UserControllerTest using Java 25.0.4.1 with PID 5756 (started by pfusco in C:\Users\pfusco\Downloads\Projects\OrderProject)
-2026-10-20T17:01:34.856+02:00  INFO 5756 --- [OrderProject] [main] c.e.o.users.UserControllerTest           : No active profile set, falling back to 1 default profile: "default"
-2026-10-20T17:01:36.048+02:00  INFO 5756 --- [OrderProject] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 0 (http)
-2026-10-20T17:01:36.065+02:00  INFO 5756 --- [OrderProject] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-10-20T17:01:36.065+02:00  INFO 5756 --- [OrderProject] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
-2026-10-20T17:01:36.123+02:00  INFO 5756 --- [OrderProject] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1039 ms
-2026-10-20T17:01:36.707+02:00  INFO 5756 --- [OrderProject] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 63054 (http) with context path '/'
-2026-10-20T17:01:36.714+02:00  INFO 5756 --- [OrderProject] [main] c.e.o.users.UserControllerTest           : Started UserControllerTest in 2.196 seconds (process running for 3.611)
-2026-10-20T17:01:36.719+02:00  WARN 5756 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
-2026-10-20T17:01:36.720+02:00  WARN 5756 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
-2026-10-20T17:01:38.249+02:00  INFO 5756 --- [OrderProject] [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-10-20T17:01:38.249+02:00  INFO 5756 --- [OrderProject] [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-10-20T17:01:38.251+02:00  INFO 5756 --- [OrderProject] [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-10-20T17:01:38.390+02:00  WARN 5756 --- [OrderProject] [http-nio-auto-1-exec-1] c.e.orderproject.users.UserController    : Email already exists
-2026-10-20T17:01:38.392+02:00  WARN 5756 --- [OrderProject] [http-nio-auto-1-exec-1] c.e.o.exceptions.GlobalExceptionHandler  : Email already exists: Email already exists
-2026-10-20T17:01:38.526+02:00  INFO 5756 --- [OrderProject] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-10-20T17:01:38.532+02:00  INFO 5756 --- [OrderProject] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-10-20T17:01:53.991+02:00  INFO 23968 --- [OrderProject] [main] c.e.o.items.ItemControllerTest           : Starting ItemControllerTest using Java 25.0.4.1 with PID 23968 (started by pfusco in C:\Users\pfusco\Downloads\Projects\OrderProject)
-2026-10-20T17:01:53.994+02:00  INFO 23968 --- [OrderProject] [main] c.e.o.items.ItemControllerTest           : No active profile set, falling back to 1 default profile: "default"
-2026-10-20T17:01:55.758+02:00  INFO 23968 --- [OrderProject] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 0 (http)
-2026-10-20T17:01:55.782+02:00  INFO 23968 --- [OrderProject] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-10-20T17:01:55.783+02:00  INFO 23968 --- [OrderProject] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
-2026-10-20T17:01:55.853+02:00  INFO 23968 --- [OrderProject] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1481 ms
-2026-10-20T17:01:56.664+02:00  INFO 23968 --- [OrderProject] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 63069 (http) with context path '/'
-2026-10-20T17:01:56.670+02:00  INFO 23968 --- [OrderProject] [main] c.e.o.items.ItemControllerTest           : Started ItemControllerTest in 3.221 seconds (process running for 7.825)
-2026-10-20T17:01:56.674+02:00  WARN 23968 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
-2026-10-20T17:01:56.674+02:00  WARN 23968 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
-2026-10-20T17:01:58.059+02:00  INFO 23968 --- [OrderProject] [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-10-20T17:01:58.060+02:00  INFO 23968 --- [OrderProject] [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-10-20T17:01:58.062+02:00  INFO 23968 --- [OrderProject] [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-10-20T17:01:58.211+02:00  WARN 23968 --- [OrderProject] [http-nio-auto-1-exec-1] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{field=name, message=must not be blank}]
-2026-10-20T17:01:58.349+02:00  WARN 23968 --- [OrderProject] [http-nio-auto-1-exec-2] c.e.o.exceptions.GlobalExceptionHandler  : Unauthorized request
-2026-10-20T17:01:58.378+02:00  INFO 23968 --- [OrderProject] [http-nio-auto-1-exec-3] c.example.orderproject.databases.UserDB  : Item saved: com.example.orderproject.items.Item@36d71b92
-2026-10-20T17:01:58.403+02:00  WARN 23968 --- [OrderProject] [http-nio-auto-1-exec-4] c.e.o.exceptions.GlobalExceptionHandler  : Unauthorized request
-2026-10-20T17:01:58.415+02:00  INFO 23968 --- [OrderProject] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.orderproject.users.UserControllerTest]: UserControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-10-20T17:01:58.429+02:00  INFO 23968 --- [OrderProject] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.orderproject.OrderProjectApplication for test class com.example.orderproject.users.UserControllerTest
-2026-10-20T17:01:58.431+02:00  INFO 23968 --- [OrderProject] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.orderproject.users.UserControllerTest]: UserControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-10-20T17:01:58.433+02:00  INFO 23968 --- [OrderProject] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.orderproject.OrderProjectApplication for test class com.example.orderproject.users.UserControllerTest
-2026-10-20T17:01:58.483+02:00  WARN 23968 --- [OrderProject] [http-nio-auto-1-exec-5] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{field=email, message=Email must have the form x@x.x using only letters and numbers}, {field=email, message=must not be blank}]
-2026-10-20T17:01:58.518+02:00  INFO 23968 --- [OrderProject] [http-nio-auto-1-exec-6] c.example.orderproject.databases.UserDB  : User saved: com.example.orderproject.users.BasicUser@59bb485a
-2026-10-20T17:01:58.546+02:00  WARN 23968 --- [OrderProject] [http-nio-auto-1-exec-7] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{field=address.zipcode, message=must not be blank}]
-2026-10-20T17:01:58.569+02:00  WARN 23968 --- [OrderProject] [http-nio-auto-1-exec-8] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{field=address.city, message=must not be blank}]
-2026-10-20T17:01:58.595+02:00  WARN 23968 --- [OrderProject] [http-nio-auto-1-exec-9] c.e.orderproject.users.UserController    : Email already exists
-2026-10-20T17:01:58.596+02:00  WARN 23968 --- [OrderProject] [http-nio-auto-1-exec-9] c.e.o.exceptions.GlobalExceptionHandler  : Email already exists: Email already exists
-2026-10-20T17:01:58.620+02:00  INFO 23968 --- [OrderProject] [http-nio-auto-1-exec-10] c.example.orderproject.databases.UserDB  : User saved: com.example.orderproject.users.BasicUser@2f4db96f
-2026-10-20T17:01:58.645+02:00  WARN 23968 --- [OrderProject] [http-nio-auto-1-exec-1] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{field=phoneNumber.prefix, message=Prefix must have only numbers}]
-2026-10-20T17:01:58.666+02:00  INFO 23968 --- [OrderProject] [http-nio-auto-1-exec-2] c.example.orderproject.databases.UserDB  : User saved: com.example.orderproject.users.BasicUser@41120de7
-2026-10-20T17:01:58.689+02:00  WARN 23968 --- [OrderProject] [http-nio-auto-1-exec-3] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{field=email, message=Email must have the form x@x.x using only letters and numbers}, {field=email, message=must be a well-formed email address}]
-2026-10-20T17:01:58.699+02:00  INFO 23968 --- [OrderProject] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.orderproject.OrderProjectApplicationTests]: OrderProjectApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-10-20T17:01:58.708+02:00  INFO 23968 --- [OrderProject] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.orderproject.OrderProjectApplication for test class com.example.orderproject.OrderProjectApplicationTests
-2026-10-20T17:01:58.709+02:00  INFO 23968 --- [OrderProject] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.orderproject.OrderProjectApplicationTests]: OrderProjectApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-10-20T17:01:58.710+02:00  INFO 23968 --- [OrderProject] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.orderproject.OrderProjectApplication for test class com.example.orderproject.OrderProjectApplicationTests
-2026-10-20T17:01:58.755+02:00  INFO 23968 --- [OrderProject] [main] c.e.o.OrderProjectApplicationTests       : Starting OrderProjectApplicationTests using Java 25.0.4.1 with PID 23968 (started by pfusco in C:\Users\pfusco\Downloads\Projects\OrderProject)
-2026-10-20T17:01:58.755+02:00  INFO 23968 --- [OrderProject] [main] c.e.o.OrderProjectApplicationTests       : No active profile set, falling back to 1 default profile: "default"
-2026-10-20T17:01:59.044+02:00  INFO 23968 --- [OrderProject] [main] c.e.o.OrderProjectApplicationTests       : Started OrderProjectApplicationTests in 0.32 seconds (process running for 10.199)
-2026-10-20T17:01:59.045+02:00  WARN 23968 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
-2026-10-20T17:01:59.045+02:00  WARN 23968 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
-2026-10-20T17:01:59.084+02:00  INFO 23968 --- [OrderProject] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-10-20T17:01:59.090+02:00  INFO 23968 --- [OrderProject] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+   itemController defined in file [C:\Users\pfusco\Downloads\Projects\OrderProject\target\classes\com\example\orderproject\items\ItemController.class]
+┌─────┐
+|  securityService defined in file [C:\Users\pfusco\Downloads\Projects\OrderProject\target\classes\com\example\orderproject\security\SecurityService.class]
+↑     ↓
+|  userService defined in file [C:\Users\pfusco\Downloads\Projects\OrderProject\target\classes\com\example\orderproject\users\UserService.class]
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2026-10-21T10:25:31.239+02:00  WARN 20432 --- [OrderProject] [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] to prepare test instance [com.example.orderproject.OrderProjectApplicationTests@51da32e5]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@e7b265e testClass = com.example.orderproject.OrderProjectApplicationTests, locations = [], classes = [com.example.orderproject.OrderProjectApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.web.server.context.SpringBootTestRandomPortContextCustomizer@7fe7c640, org.springframework.boot.test.context.PropertyMappingContextCustomizer@0, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4409e975, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@a4ca3f6, org.springframework.boot.test.autoconfigure.OnFailureConditionReportContextCustomizerFactory$OnFailureConditionReportContextCustomizer@45905bff, org.springframework.test.context.support.DynamicPropertiesContextCustomizer@0, org.springframework.boot.webmvc.test.autoconfigure.WebDriverContextCustomizer@6f0b0a5e, org.springframework.boot.test.context.SpringBootTestAnnotation@42bae1e7], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.lambda$loadContext$0(DefaultCacheAwareContextLoaderDelegate.java:195) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.test.context.cache.DefaultContextCache.put(DefaultContextCache.java:214) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:160) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:128) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:200) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:139) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:242) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$1(ClassBasedTestDescriptor.java:423) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:428) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$0(ClassBasedTestDescriptor.java:422) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:186) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:214) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:214) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1716) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:153) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:176) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:632) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:422) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$0(ClassBasedTestDescriptor.java:334) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:333) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$1(ClassBasedTestDescriptor.java:322) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$0(ClassBasedTestDescriptor.java:321) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:27) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:127) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:126) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:70) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$0(NodeTestTask.java:144) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:144) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:110) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:36) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:52) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:58) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:246) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:218) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:179) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:66) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:157) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:65) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:125) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$2(InterceptingLauncher.java:57) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:56) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:81) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at com.intellij.junit6.JUnit6TestRunnerHelper.execute(JUnit6TestRunnerHelper.java:69) ~[junit6-rt.jar:na]
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:70) ~[junit5-rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:226) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:62) ~[junit-rt.jar:na]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'itemController' defined in file [C:\Users\pfusco\Downloads\Projects\OrderProject\target\classes\com\example\orderproject\items\ItemController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'securityService' defined in file [C:\Users\pfusco\Downloads\Projects\OrderProject\target\classes\com\example\orderproject\security\SecurityService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'userService' defined in file [C:\Users\pfusco\Downloads\Projects\OrderProject\target\classes\com\example\orderproject\users\UserService.class]: Unsatisfied dependency expressed through constructor parameter 2: Error creating bean with name 'securityService': Requested bean is currently in creation: Is there an unresolvable circular reference or an asynchronous initialization dependency?
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1380) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1219) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1225) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1191) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$2(SpringBootContextLoader.java:155) ~[spring-boot-test-4.1.1.jar:4.1.1]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-7.0.9.jar:7.0.9]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-7.0.9.jar:7.0.9]
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1465) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:600) ~[spring-boot-test-4.1.1.jar:4.1.1]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:155) ~[spring-boot-test-4.1.1.jar:4.1.1]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:114) ~[spring-boot-test-4.1.1.jar:4.1.1]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:247) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.lambda$loadContext$0(DefaultCacheAwareContextLoaderDelegate.java:167) ~[spring-test-7.0.9.jar:7.0.9]
+	... 82 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityService' defined in file [C:\Users\pfusco\Downloads\Projects\OrderProject\target\classes\com\example\orderproject\security\SecurityService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'userService' defined in file [C:\Users\pfusco\Downloads\Projects\OrderProject\target\classes\com\example\orderproject\users\UserService.class]: Unsatisfied dependency expressed through constructor parameter 2: Error creating bean with name 'securityService': Requested bean is currently in creation: Is there an unresolvable circular reference or an asynchronous initialization dependency?
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1380) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1219) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:229) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1769) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1658) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:912) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-7.0.9.jar:7.0.9]
+	... 108 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService' defined in file [C:\Users\pfusco\Downloads\Projects\OrderProject\target\classes\com\example\orderproject\users\UserService.class]: Unsatisfied dependency expressed through constructor parameter 2: Error creating bean with name 'securityService': Requested bean is currently in creation: Is there an unresolvable circular reference or an asynchronous initialization dependency?
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1380) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1219) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:1232) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1711) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1658) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:912) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-7.0.9.jar:7.0.9]
+	... 122 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'securityService': Requested bean is currently in creation: Is there an unresolvable circular reference or an asynchronous initialization dependency?
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.beforeSingletonCreation(DefaultSingletonBeanRegistry.java:541) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:310) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:229) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1769) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1658) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:912) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-7.0.9.jar:7.0.9]
+	... 136 common frames omitted
+
+2026-10-21T10:27:17.726+02:00  WARN 23392 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-21T10:27:17.727+02:00  WARN 23392 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-21T10:27:37.156+02:00  WARN 3560 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-21T10:27:37.159+02:00  WARN 3560 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-21T10:30:14.000+02:00  WARN 3560 --- [OrderProject] [http-nio-8080-exec-9] c.e.o.exceptions.GlobalExceptionHandler  : Unauthorized request
+2026-10-21T10:33:54.379+02:00  WARN 11540 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-21T10:33:54.383+02:00  WARN 11540 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-21T10:36:49.567+02:00  WARN 11540 --- [OrderProject] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-10-21T10:38:21.548+02:00  WARN 7944 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-21T10:38:21.550+02:00  WARN 7944 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-21T10:38:23.407+02:00  WARN 7944 --- [OrderProject] [http-nio-auto-1-exec-1] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{message=must not be blank, field=name}]
+2026-10-21T10:38:23.583+02:00  WARN 7944 --- [OrderProject] [http-nio-auto-1-exec-2] c.e.o.exceptions.GlobalExceptionHandler  : Unauthorized request
+2026-10-21T10:38:23.650+02:00  WARN 7944 --- [OrderProject] [http-nio-auto-1-exec-4] c.e.o.exceptions.GlobalExceptionHandler  : Unauthorized request
+2026-10-21T10:38:23.743+02:00  WARN 7944 --- [OrderProject] [http-nio-auto-1-exec-8] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{message=Email must have the form x@x.x using only letters and numbers, field=email}, {message=must not be blank, field=email}, {message=size must be between 6 and 8, field=phoneNumber.number}]
+2026-10-21T10:38:23.791+02:00  WARN 7944 --- [OrderProject] [http-nio-auto-1-exec-6] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{message=size must be between 6 and 8, field=phoneNumber.number}]
+2026-10-21T10:38:23.859+02:00  WARN 7944 --- [OrderProject] [http-nio-auto-1-exec-3] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{message=must not be blank, field=address.zipcode}, {message=size must be between 6 and 8, field=phoneNumber.number}]
+2026-10-21T10:38:23.891+02:00  WARN 7944 --- [OrderProject] [http-nio-auto-1-exec-1] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{message=must not be blank, field=address.city}, {message=size must be between 6 and 8, field=phoneNumber.number}]
+2026-10-21T10:38:23.920+02:00  WARN 7944 --- [OrderProject] [http-nio-auto-1-exec-2] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{message=size must be between 6 and 8, field=phoneNumber.number}]
+2026-10-21T10:38:23.947+02:00  WARN 7944 --- [OrderProject] [http-nio-auto-1-exec-5] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{message=size must be between 6 and 8, field=phoneNumber.number}]
+2026-10-21T10:38:23.973+02:00  WARN 7944 --- [OrderProject] [http-nio-auto-1-exec-4] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{message=Prefix must have only numbers, field=phoneNumber.prefix}, {message=size must be between 6 and 8, field=phoneNumber.number}]
+2026-10-21T10:38:23.997+02:00  WARN 7944 --- [OrderProject] [http-nio-auto-1-exec-8] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{message=size must be between 6 and 8, field=phoneNumber.number}]
+2026-10-21T10:38:24.026+02:00  WARN 7944 --- [OrderProject] [http-nio-auto-1-exec-6] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{message=must be a well-formed email address, field=email}, {message=size must be between 6 and 8, field=phoneNumber.number}, {message=Email must have the form x@x.x using only letters and numbers, field=email}]
+2026-10-21T10:38:24.459+02:00  WARN 7944 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-21T10:38:24.460+02:00  WARN 7944 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-21T10:40:05.759+02:00  WARN 9948 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-21T10:40:05.761+02:00  WARN 9948 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-21T10:40:07.600+02:00  WARN 9948 --- [OrderProject] [http-nio-auto-1-exec-1] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{message=must not be blank, field=name}]
+2026-10-21T10:40:07.791+02:00  WARN 9948 --- [OrderProject] [http-nio-auto-1-exec-4] c.e.o.exceptions.GlobalExceptionHandler  : Unauthorized request
+2026-10-21T10:40:07.868+02:00  WARN 9948 --- [OrderProject] [http-nio-auto-1-exec-2] c.e.o.exceptions.GlobalExceptionHandler  : Unauthorized request
+2026-10-21T10:40:07.987+02:00  WARN 9948 --- [OrderProject] [http-nio-auto-1-exec-3] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{message=must not be blank, field=email}, {message=Email must have the form x@x.x using only letters and numbers, field=email}]
+2026-10-21T10:40:08.069+02:00  WARN 9948 --- [OrderProject] [http-nio-auto-1-exec-7] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{message=must not be blank, field=address.zipcode}]
+2026-10-21T10:40:08.097+02:00  WARN 9948 --- [OrderProject] [http-nio-auto-1-exec-10] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{message=must not be blank, field=address.city}]
+2026-10-21T10:40:08.136+02:00  WARN 9948 --- [OrderProject] [http-nio-auto-1-exec-8] c.e.orderproject.users.UserController    : Email already exists
+2026-10-21T10:40:08.138+02:00  WARN 9948 --- [OrderProject] [http-nio-auto-1-exec-8] c.e.o.exceptions.GlobalExceptionHandler  : Email already exists: Email already exists
+2026-10-21T10:40:08.223+02:00  WARN 9948 --- [OrderProject] [http-nio-auto-1-exec-9] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{message=Prefix must have only numbers, field=phoneNumber.prefix}]
+2026-10-21T10:40:08.275+02:00  WARN 9948 --- [OrderProject] [http-nio-auto-1-exec-10] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{message=Email must have the form x@x.x using only letters and numbers, field=email}, {message=must be a well-formed email address, field=email}]
+2026-10-21T10:40:08.747+02:00  WARN 9948 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-21T10:40:08.748+02:00  WARN 9948 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-21T10:55:13.211+02:00  WARN 14112 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-21T10:55:13.212+02:00  WARN 14112 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-21T11:02:01.942+02:00  WARN 17336 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-21T11:02:01.944+02:00  WARN 17336 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-21T11:02:03.816+02:00  WARN 17336 --- [OrderProject] [http-nio-auto-1-exec-1] c.e.o.exceptions.GlobalExceptionHandler  : User not found: User not found
+2026-10-21T11:03:34.119+02:00  WARN 3884 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-21T11:03:34.121+02:00  WARN 3884 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-21T11:08:35.151+02:00  WARN 8924 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-21T11:08:35.153+02:00  WARN 8924 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-21T11:08:37.175+02:00  WARN 8924 --- [OrderProject] [http-nio-auto-1-exec-2] c.e.o.exceptions.GlobalExceptionHandler  : User not found: User not found
+2026-10-21T11:10:49.621+02:00  WARN 8756 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-21T11:10:49.622+02:00  WARN 8756 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-21T11:10:51.443+02:00  WARN 8756 --- [OrderProject] [http-nio-auto-1-exec-1] c.e.o.exceptions.GlobalExceptionHandler  : Unauthorized request
+2026-10-21T11:12:09.516+02:00  WARN 436 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-21T11:12:09.517+02:00  WARN 436 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-21T11:12:11.264+02:00  WARN 436 --- [OrderProject] [http-nio-auto-1-exec-1] c.e.o.exceptions.GlobalExceptionHandler  : Unauthorized request
+2026-10-21T11:14:58.454+02:00  WARN 6028 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-21T11:14:58.456+02:00  WARN 6028 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-21T11:15:00.598+02:00  WARN 6028 --- [OrderProject] [http-nio-auto-1-exec-1] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{field=email, message=Email must have the form x@x.x using only letters and numbers}, {field=email, message=must not be blank}]
+2026-10-21T11:15:00.834+02:00  WARN 6028 --- [OrderProject] [http-nio-auto-1-exec-7] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{field=address.zipcode, message=must not be blank}]
+2026-10-21T11:15:00.881+02:00  WARN 6028 --- [OrderProject] [http-nio-auto-1-exec-5] c.e.o.exceptions.GlobalExceptionHandler  : Unauthorized request
+2026-10-21T11:15:00.938+02:00  WARN 6028 --- [OrderProject] [http-nio-auto-1-exec-2] c.e.o.exceptions.GlobalExceptionHandler  : Unauthorized request
+2026-10-21T11:15:00.965+02:00  WARN 6028 --- [OrderProject] [http-nio-auto-1-exec-6] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{field=address.city, message=must not be blank}]
+2026-10-21T11:15:01.042+02:00  WARN 6028 --- [OrderProject] [http-nio-auto-1-exec-9] c.e.o.exceptions.GlobalExceptionHandler  : Unauthorized request
+2026-10-21T11:15:01.071+02:00  WARN 6028 --- [OrderProject] [http-nio-auto-1-exec-10] c.e.orderproject.users.UserController    : Email already exists
+2026-10-21T11:15:01.072+02:00  WARN 6028 --- [OrderProject] [http-nio-auto-1-exec-10] c.e.o.exceptions.GlobalExceptionHandler  : Email already exists: Email already exists
+2026-10-21T11:15:01.129+02:00  WARN 6028 --- [OrderProject] [http-nio-auto-1-exec-4] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{field=phoneNumber.prefix, message=Prefix must have only numbers}]
+2026-10-21T11:15:01.177+02:00  WARN 6028 --- [OrderProject] [http-nio-auto-1-exec-5] c.e.o.exceptions.GlobalExceptionHandler  : Unauthorized request
+2026-10-21T11:15:01.206+02:00  WARN 6028 --- [OrderProject] [http-nio-auto-1-exec-2] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{field=email, message=Email must have the form x@x.x using only letters and numbers}, {field=email, message=must be a well-formed email address}]
+2026-10-21T11:16:01.098+02:00  WARN 17520 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-21T11:16:01.099+02:00  WARN 17520 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-21T11:17:03.038+02:00  WARN 16904 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-21T11:17:03.040+02:00  WARN 16904 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-21T11:17:17.887+02:00  WARN 22316 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-21T11:17:17.889+02:00  WARN 22316 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-21T11:17:19.680+02:00  WARN 22316 --- [OrderProject] [http-nio-auto-1-exec-1] c.e.o.exceptions.GlobalExceptionHandler  : User not found: User not found
+2026-10-21T11:17:30.219+02:00  WARN 17552 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-21T11:17:30.221+02:00  WARN 17552 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-21T11:17:32.205+02:00  WARN 17552 --- [OrderProject] [http-nio-auto-1-exec-1] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{field=email, message=must not be blank}, {field=email, message=Email must have the form x@x.x using only letters and numbers}]
+2026-10-21T11:17:32.390+02:00  WARN 17552 --- [OrderProject] [http-nio-auto-1-exec-3] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{field=address.zipcode, message=must not be blank}]
+2026-10-21T11:17:32.449+02:00  WARN 17552 --- [OrderProject] [http-nio-auto-1-exec-4] c.e.o.exceptions.GlobalExceptionHandler  : Unauthorized request
+2026-10-21T11:17:32.480+02:00  WARN 17552 --- [OrderProject] [http-nio-auto-1-exec-5] c.e.o.exceptions.GlobalExceptionHandler  : Unauthorized request
+2026-10-21T11:17:32.525+02:00  WARN 17552 --- [OrderProject] [http-nio-auto-1-exec-7] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{field=address.city, message=must not be blank}]
+2026-10-21T11:17:32.618+02:00  WARN 17552 --- [OrderProject] [http-nio-auto-1-exec-9] c.e.o.exceptions.GlobalExceptionHandler  : Unauthorized request
+2026-10-21T11:17:32.642+02:00  WARN 17552 --- [OrderProject] [http-nio-auto-1-exec-10] c.e.orderproject.users.UserController    : Email already exists
+2026-10-21T11:17:32.643+02:00  WARN 17552 --- [OrderProject] [http-nio-auto-1-exec-10] c.e.o.exceptions.GlobalExceptionHandler  : Email already exists: Email already exists
+2026-10-21T11:17:32.691+02:00  WARN 17552 --- [OrderProject] [http-nio-auto-1-exec-2] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{field=phoneNumber.prefix, message=Prefix must have only numbers}]
+2026-10-21T11:17:32.734+02:00  WARN 17552 --- [OrderProject] [http-nio-auto-1-exec-4] c.e.o.exceptions.GlobalExceptionHandler  : Unauthorized request
+2026-10-21T11:17:32.761+02:00  WARN 17552 --- [OrderProject] [http-nio-auto-1-exec-5] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{field=email, message=must be a well-formed email address}, {field=email, message=Email must have the form x@x.x using only letters and numbers}]
+2026-10-21T11:17:32.787+02:00  WARN 17552 --- [OrderProject] [http-nio-auto-1-exec-7] c.e.o.exceptions.GlobalExceptionHandler  : User not found: User not found
+2026-10-21T11:30:25.171+02:00  WARN 17396 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-21T11:30:25.172+02:00  WARN 17396 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-21T11:30:27.134+02:00  WARN 17396 --- [OrderProject] [http-nio-auto-1-exec-1] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{field=name, message=must not be blank}]
+2026-10-21T11:30:27.345+02:00  WARN 17396 --- [OrderProject] [http-nio-auto-1-exec-2] c.e.o.exceptions.GlobalExceptionHandler  : Unauthorized request
+2026-10-21T11:30:27.411+02:00  WARN 17396 --- [OrderProject] [http-nio-auto-1-exec-5] c.e.o.exceptions.GlobalExceptionHandler  : Unauthorized request
+2026-10-21T11:30:27.503+02:00  WARN 17396 --- [OrderProject] [http-nio-auto-1-exec-6] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{field=email, message=Email must have the form x@x.x using only letters and numbers}, {field=email, message=must not be blank}]
+2026-10-21T11:30:27.582+02:00  WARN 17396 --- [OrderProject] [http-nio-auto-1-exec-4] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{field=address.zipcode, message=must not be blank}]
+2026-10-21T11:30:27.631+02:00  WARN 17396 --- [OrderProject] [http-nio-auto-1-exec-7] c.e.o.exceptions.GlobalExceptionHandler  : Unauthorized request
+2026-10-21T11:30:27.653+02:00  WARN 17396 --- [OrderProject] [http-nio-auto-1-exec-10] c.e.o.exceptions.GlobalExceptionHandler  : Unauthorized request
+2026-10-21T11:30:27.677+02:00  WARN 17396 --- [OrderProject] [http-nio-auto-1-exec-9] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{field=address.city, message=must not be blank}]
+2026-10-21T11:30:27.756+02:00  WARN 17396 --- [OrderProject] [http-nio-auto-1-exec-3] c.e.o.exceptions.GlobalExceptionHandler  : Unauthorized request
+2026-10-21T11:30:27.783+02:00  WARN 17396 --- [OrderProject] [http-nio-auto-1-exec-5] c.e.orderproject.users.UserController    : Email already exists
+2026-10-21T11:30:27.784+02:00  WARN 17396 --- [OrderProject] [http-nio-auto-1-exec-5] c.e.o.exceptions.GlobalExceptionHandler  : Email already exists: Email already exists
+2026-10-21T11:30:27.834+02:00  WARN 17396 --- [OrderProject] [http-nio-auto-1-exec-8] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{field=phoneNumber.prefix, message=Prefix must have only numbers}]
+2026-10-21T11:30:27.876+02:00  WARN 17396 --- [OrderProject] [http-nio-auto-1-exec-7] c.e.o.exceptions.GlobalExceptionHandler  : Unauthorized request
+2026-10-21T11:30:27.897+02:00  WARN 17396 --- [OrderProject] [http-nio-auto-1-exec-10] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{field=email, message=Email must have the form x@x.x using only letters and numbers}, {field=email, message=must be a well-formed email address}]
+2026-10-21T11:30:27.924+02:00  WARN 17396 --- [OrderProject] [http-nio-auto-1-exec-9] c.e.o.exceptions.GlobalExceptionHandler  : User not found: User not found
+2026-10-21T11:30:28.395+02:00  WARN 17396 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-21T11:30:28.396+02:00  WARN 17396 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-21T11:36:50.717+02:00  WARN 14272 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-21T11:36:50.719+02:00  WARN 14272 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-21T11:36:52.643+02:00  WARN 14272 --- [OrderProject] [http-nio-auto-1-exec-1] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{message=must not be blank, field=name}]
+2026-10-21T11:36:52.859+02:00  WARN 14272 --- [OrderProject] [http-nio-auto-1-exec-2] c.e.o.exceptions.GlobalExceptionHandler  : Unauthorized request
+2026-10-21T11:36:52.924+02:00  WARN 14272 --- [OrderProject] [http-nio-auto-1-exec-4] c.e.o.exceptions.GlobalExceptionHandler  : Unauthorized request
+2026-10-21T11:36:53.023+02:00  WARN 14272 --- [OrderProject] [http-nio-auto-1-exec-3] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{message=Email must have the form x@x.x using only letters and numbers, field=email}, {message=must not be blank, field=email}]
+2026-10-21T11:36:53.109+02:00  WARN 14272 --- [OrderProject] [http-nio-auto-1-exec-8] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{message=must not be blank, field=address.zipcode}]
+2026-10-21T11:36:53.175+02:00  WARN 14272 --- [OrderProject] [http-nio-auto-1-exec-2] c.e.o.exceptions.GlobalExceptionHandler  : Unauthorized request
+2026-10-21T11:36:53.198+02:00  WARN 14272 --- [OrderProject] [http-nio-auto-1-exec-5] c.e.o.exceptions.GlobalExceptionHandler  : Unauthorized request
+2026-10-21T11:36:53.227+02:00  WARN 14272 --- [OrderProject] [http-nio-auto-1-exec-4] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{message=must not be blank, field=address.city}]
+2026-10-21T11:36:53.314+02:00  WARN 14272 --- [OrderProject] [http-nio-auto-1-exec-8] c.e.o.exceptions.GlobalExceptionHandler  : Unauthorized request
+2026-10-21T11:36:53.345+02:00  WARN 14272 --- [OrderProject] [http-nio-auto-1-exec-9] c.e.orderproject.users.UserController    : Email already exists
+2026-10-21T11:36:53.346+02:00  WARN 14272 --- [OrderProject] [http-nio-auto-1-exec-9] c.e.o.exceptions.GlobalExceptionHandler  : Email already exists: Email already exists
+2026-10-21T11:36:53.414+02:00  WARN 14272 --- [OrderProject] [http-nio-auto-1-exec-1] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{message=Prefix must have only numbers, field=phoneNumber.prefix}]
+2026-10-21T11:36:53.458+02:00  WARN 14272 --- [OrderProject] [http-nio-auto-1-exec-2] c.e.o.exceptions.GlobalExceptionHandler  : Unauthorized request
+2026-10-21T11:36:53.482+02:00  WARN 14272 --- [OrderProject] [http-nio-auto-1-exec-5] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{message=Email must have the form x@x.x using only letters and numbers, field=email}, {message=must be a well-formed email address, field=email}]
+2026-10-21T11:36:53.510+02:00  WARN 14272 --- [OrderProject] [http-nio-auto-1-exec-4] c.e.o.exceptions.GlobalExceptionHandler  : User not found: User not found
+2026-10-21T11:36:53.993+02:00  WARN 14272 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-21T11:36:53.994+02:00  WARN 14272 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-21T11:47:30.320+02:00  WARN 22548 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-21T11:47:30.321+02:00  WARN 22548 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-21T11:47:32.051+02:00  WARN 22548 --- [OrderProject] [http-nio-auto-1-exec-1] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{field=name, message=must not be blank}]
+2026-10-21T11:47:32.234+02:00  WARN 22548 --- [OrderProject] [http-nio-auto-1-exec-2] c.e.o.exceptions.GlobalExceptionHandler  : Unauthorized request
+2026-10-21T11:47:32.302+02:00  WARN 22548 --- [OrderProject] [http-nio-auto-1-exec-4] c.e.o.exceptions.GlobalExceptionHandler  : Unauthorized request
+2026-10-21T11:47:32.393+02:00  WARN 22548 --- [OrderProject] [http-nio-auto-1-exec-6] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{field=email, message=must not be blank}, {field=email, message=Email must have the form x@x.x using only letters and numbers}]
+2026-10-21T11:47:32.468+02:00  WARN 22548 --- [OrderProject] [http-nio-auto-1-exec-5] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{field=address.zipcode, message=must not be blank}]
+2026-10-21T11:47:32.525+02:00  WARN 22548 --- [OrderProject] [http-nio-auto-1-exec-8] c.e.o.exceptions.GlobalExceptionHandler  : Unauthorized request
+2026-10-21T11:47:32.547+02:00  WARN 22548 --- [OrderProject] [http-nio-auto-1-exec-9] c.e.o.exceptions.GlobalExceptionHandler  : Unauthorized request
+2026-10-21T11:47:32.574+02:00  WARN 22548 --- [OrderProject] [http-nio-auto-1-exec-10] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{field=address.city, message=must not be blank}]
+2026-10-21T11:47:32.703+02:00  WARN 22548 --- [OrderProject] [http-nio-auto-1-exec-9] c.e.o.exceptions.GlobalExceptionHandler  : Unauthorized request
+2026-10-21T11:47:32.757+02:00  WARN 22548 --- [OrderProject] [http-nio-auto-1-exec-10] c.e.orderproject.users.UserController    : Email already exists
+2026-10-21T11:47:32.758+02:00  WARN 22548 --- [OrderProject] [http-nio-auto-1-exec-10] c.e.o.exceptions.GlobalExceptionHandler  : Email already exists: Email already exists
+2026-10-21T11:47:32.813+02:00  WARN 22548 --- [OrderProject] [http-nio-auto-1-exec-6] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{field=phoneNumber.prefix, message=Prefix must have only numbers}]
+2026-10-21T11:47:32.853+02:00  WARN 22548 --- [OrderProject] [http-nio-auto-1-exec-3] c.e.o.exceptions.GlobalExceptionHandler  : Unauthorized request
+2026-10-21T11:47:32.879+02:00  WARN 22548 --- [OrderProject] [http-nio-auto-1-exec-2] c.e.o.exceptions.GlobalExceptionHandler  : Request validation failed: [{field=email, message=must be a well-formed email address}, {field=email, message=Email must have the form x@x.x using only letters and numbers}]
+2026-10-21T11:47:32.908+02:00  WARN 22548 --- [OrderProject] [http-nio-auto-1-exec-7] c.e.o.exceptions.GlobalExceptionHandler  : User not found: User not found
+2026-10-21T11:47:33.375+02:00  WARN 22548 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-21T11:47:33.376+02:00  WARN 22548 --- [OrderProject] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'

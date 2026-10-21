@@ -1,6 +1,7 @@
 package com.example.orderproject.databases;
 
 import com.example.orderproject.users.*;
+import com.example.orderproject.users.enums.Role;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @Component
 public class UserDB {
@@ -41,7 +43,7 @@ public class UserDB {
             ));
 
 
-    private static List<User> users = new ArrayList<>(List.of(admin));
+    private static List<User> users = new ArrayList<>(List.of(admin, basicUser));
 
 
     public void save(BasicUser basicUser) {
@@ -59,6 +61,18 @@ public class UserDB {
         return users.stream().noneMatch(user -> user.getEmail().equals(email));
     }
 
+    public List<User> getAllUsers() {
+        return users.stream()
+                .filter(u -> u.getRole().equals(Role.USER))
+                .toList();
+    }
+
+    public Optional<User> getUserById(UUID id){
+        return users.stream()
+                .filter(user -> user.getId().equals(id))
+                .findFirst();
+    }
+
     //ONLY FOR TESTING PURPOSES
     public Admin getAdmin(){
         return admin;
@@ -72,5 +86,6 @@ public class UserDB {
     public void reset() {
         users.clear();
         users.add(admin);
+        users.add(basicUser);
     }
 }

@@ -1,9 +1,12 @@
 package com.example.orderproject.users;
 
 import com.example.orderproject.databases.UserDB;
+import com.example.orderproject.users.dtos.UserGenericDetailsDTO;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @Repository
 public class UserRepository {
@@ -23,5 +26,13 @@ public class UserRepository {
 
     public boolean checkEmailIsUnique(String email) {
         return userDB.checkEmailIsUnique(email);
+    }
+
+    public List<User> getAllUsers() {
+        return userDB.getAllUsers();
+    }
+
+    public Optional<User> getUserDetails(UUID id){
+        return userDB.getUserById(id);
     }
 }
