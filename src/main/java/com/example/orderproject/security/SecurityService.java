@@ -23,7 +23,7 @@ public class SecurityService {
         this.userService = userService;
     }
 
-    public void validateAuthorization(String auth, Feature feature){
+    public User validateAuthorization(String auth, Feature feature){
         if(auth == null || auth.isBlank() || !auth.startsWith("Basic ")){
             throw new UnauthorizedException();
         }
@@ -55,5 +55,6 @@ public class SecurityService {
         if (!user.canHaveAccessTo(feature)) {
             throw new UnauthorizedException();
         }
+        return user;
     }
 }

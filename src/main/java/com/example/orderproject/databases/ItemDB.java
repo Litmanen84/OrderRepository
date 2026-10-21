@@ -7,6 +7,8 @@ import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
 
 @Component
 public class ItemDB {
@@ -22,6 +24,11 @@ public class ItemDB {
         return items.stream().anyMatch(item -> item.getName().equals(name));
     }
 
+    public Optional<Item> getItemById(UUID id){
+        return items.stream()
+                .filter(i -> i.getId().equals(id))
+                .findFirst();
+    }
 
     public void clear(){
         items.clear();

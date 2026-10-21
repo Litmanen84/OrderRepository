@@ -1,18 +1,25 @@
 package com.example.orderproject.items;
 
 import java.math.BigDecimal;
+import java.util.UUID;
 
 public class Item {
+    private final UUID id;
     private String name;
     private String description;
     private BigDecimal price;
     private Integer amount;
 
     public Item(String name, String description, BigDecimal price, Integer amount) {
+        this.id = UUID.randomUUID();
         this.name = name;
         this.description = description;
         this.price = price;
         this.amount = amount;
+    }
+
+    public UUID getId() {
+        return id;
     }
 
     public String getName() {
@@ -29,5 +36,9 @@ public class Item {
 
     public Integer getAmount() {
         return amount;
+    }
+
+    public void setAmount(Integer amount) {
+        this.amount = amount;
     }
 }

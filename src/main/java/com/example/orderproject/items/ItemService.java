@@ -1,9 +1,13 @@
 package com.example.orderproject.items;
 
 import com.example.orderproject.exceptions.ItemAlreadyExistsException;
+import com.example.orderproject.exceptions.ItemNotFoundException;
 import com.example.orderproject.items.dtos.CreateItemsDTO;
 import com.example.orderproject.items.mappers.ItemMapper;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
+import java.util.UUID;
 
 @Service
 public class ItemService {
@@ -21,5 +25,10 @@ public class ItemService {
         }
         Item itemsToCreate = mapper.fromCreateItemDtoToItem(items);
         repo.createItems(itemsToCreate);
+    }
+
+    public Item getItemById(UUID id){
+        return repo.getItemById(id)
+                .orElseThrow(() -> new ItemNotFoundException("Item not found"));
     }
 }
