@@ -52,6 +52,7 @@ class OrderControllerTest {
 
     @Test
     void createOrderCorrectlyCreatesOrder() {
+        itemDB.reset();
         Item item = itemDB.getTestItem();
         UUID itemId = item.getId();
         CreateItemGroupDTO createItemGroupDTO = new CreateItemGroupDTO(itemId, 3);

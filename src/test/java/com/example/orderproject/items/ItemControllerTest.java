@@ -41,7 +41,7 @@ class ItemControllerTest {
     @BeforeEach
     void setUp() {
         RestAssured.port = port;
-        itemDB.clear();
+        itemDB.reset();
         admin = userDB.getAdmin();
         user = userDB.getBasicUser();
         credentials = Base64.getEncoder().encodeToString((admin.getEmail() + ":" + admin.getPassword()).getBytes(StandardCharsets.UTF_8));

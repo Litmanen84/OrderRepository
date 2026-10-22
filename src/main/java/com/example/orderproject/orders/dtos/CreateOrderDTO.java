@@ -18,5 +18,4 @@ public class CreateOrderDTO {
 
     public List<CreateItemGroupDTO> getItems() { return items; }
 
-    public void setItems(List<CreateItemGroupDTO> items) { this.items = items; }
 }

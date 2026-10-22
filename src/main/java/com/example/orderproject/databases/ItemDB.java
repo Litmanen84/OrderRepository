@@ -39,8 +39,9 @@ public class ItemDB {
                 .findFirst();
     }
 
-    public void clear(){
+    public void reset(){
         items.clear();
+        items.add(testItem);
     }
 
     public Item getTestItem(){
