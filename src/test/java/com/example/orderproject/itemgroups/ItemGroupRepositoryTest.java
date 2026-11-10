@@ -6,6 +6,7 @@ import com.example.orderproject.databases.UserDB;
 import com.example.orderproject.items.Item;
 import com.example.orderproject.users.User;
 import org.junit.jupiter.api.Test;
+import org.springframework.test.context.ActiveProfiles;
 
 import java.time.LocalDate;
 
