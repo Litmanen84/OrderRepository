@@ -1,0 +1,64 @@
+CREATE TABLE USERS (
+    ID SERIAL PRIMARY KEY,
+    FIRST_NAME VARCHAR(255) NOT NULL,
+    LAST_NAME VARCHAR(255) NOT NULL,
+    EMAIL VARCHAR(255) NOT NULL,
+    HASHED_PASSWORD VARCHAR(255) NOT NULL,
+    STREET VARCHAR(255) NOT NULL,
+    HOUSE_NUMBER VARCHAR(255) NOT NULL,
+    CITY VARCHAR(255) NOT NULL,
+    ZIP_CODE VARCHAR(255) NOT NULL,
+    PHONE_NUMBER VARCHAR(255) NOT NULL,
+    ROLE VARCHAR(255) NOT NULL,
+
+    CONSTRAINT uq_users_email UNIQUE (EMAIL),
+    CONSTRAINT uq_users_phone_number UNIQUE (PHONE_NUMBER),
+    CONSTRAINT ck_users_role CHECK (ROLE IN ('ADMIN', 'USER'))
+);
+
+CREATE TABLE ORDERS (
+    ID SERIAL PRIMARY KEY,
+    ORDER_PRICE NUMERIC(10, 2) NOT NULL,
+    USERS_ID INTEGER NOT NULL,
+    CREATED_AT TIMESTAMP WITH TIME ZONE NOT NULL,
+    CONSTRAINT fk_orders_users_id
+        FOREIGN KEY (users_id)
+            REFERENCES USERS (id),
+    CONSTRAINT ck_orders_price CHECK (ORDER_PRICE >= 0)
+);
+
+CREATE TABLE ITEMS (
+    ID SERIAL PRIMARY KEY,
+    NAME VARCHAR(255) NOT NULL,
+    DESCRIPTION TEXT,
+    PRICE NUMERIC(10, 2) NOT NULL,
+    AMOUNT INTEGER NOT NULL,
+    CONSTRAINT ck_items_amount CHECK (AMOUNT >= 0),
+    CONSTRAINT ck_items_price CHECK (PRICE >= 0),
+    CONSTRAINT uq_items_name UNIQUE (NAME)
+);
+
+CREATE TABLE ITEM_GROUPS (
+    ID SERIAL PRIMARY KEY,
+    AMOUNT INTEGER NOT NULL,
+    SHIPPING_DATE DATE NOT NULL,
+    ITEMS_ID INTEGER NOT NULL,
+    ORDERS_ID INTEGER NOT NULL,
+    UNIT_PRICE NUMERIC(10, 2) NOT NULL,
+    CONSTRAINT fk_item_groups_items_id
+        FOREIGN KEY (items_id)
+            REFERENCES ITEMS (id),
+    CONSTRAINT fk_item_groups_orders_id
+        FOREIGN KEY (orders_id)
+            REFERENCES ORDERS (id),
+    CONSTRAINT ck_item_groups_price CHECK (UNIT_PRICE >= 0),
+    CONSTRAINT ck_item_groups_amount CHECK (AMOUNT > 0)
+);
+-- =========================================================
+-- INDEXES
+-- Primary keys and UNIQUE constraints already create indexes.
+-- =========================================================
+
+CREATE INDEX idx_orders_users_id ON ORDERS (USERS_ID);
+CREATE INDEX idx_item_groups_items_id ON ITEM_GROUPS (ITEMS_ID);
+CREATE INDEX idx_item_groups_orders_id ON ITEM_GROUPS (ORDERS_ID);
