@@ -54,6 +54,7 @@ CREATE TABLE ITEM_GROUPS (
     CONSTRAINT ck_item_groups_price CHECK (UNIT_PRICE >= 0),
     CONSTRAINT ck_item_groups_amount CHECK (AMOUNT > 0)
 );
+
 -- =========================================================
 -- INDEXES
 -- Primary keys and UNIQUE constraints already create indexes.

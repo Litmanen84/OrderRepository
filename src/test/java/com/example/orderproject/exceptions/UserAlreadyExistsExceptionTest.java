@@ -1,5 +1,6 @@
 package com.example.orderproject.exceptions;
 
+import com.example.orderproject.users.exceptions.UserAlreadyExistsException;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
