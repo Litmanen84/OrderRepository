@@ -1,10 +1,11 @@
 package com.example.orderproject.security;
 
-import com.example.orderproject.exceptions.UnauthorizedException;
-import com.example.orderproject.users.User;
-import com.example.orderproject.users.UserRepository;
-import com.example.orderproject.users.UserService;
-import com.example.orderproject.users.enums.Feature;
+import com.example.orderproject.common.security.SecurityService;
+import com.example.orderproject.users.exceptions.UnauthorizedException;
+import com.example.orderproject.users.domain.User;
+import com.example.orderproject.users.repositories.UserRepository;
+import com.example.orderproject.users.service.UserService;
+import com.example.orderproject.users.domain.persondetails.enums.Feature;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
