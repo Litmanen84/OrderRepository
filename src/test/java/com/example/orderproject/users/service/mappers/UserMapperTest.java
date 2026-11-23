@@ -1,4 +1,4 @@
-package com.example.orderproject.users.mappers;
+package com.example.orderproject.users.service.mappers;
 
 import com.example.orderproject.users.domain.User;
 import com.example.orderproject.users.domain.persondetails.Address;
