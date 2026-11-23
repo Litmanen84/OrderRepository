@@ -1,19 +1,14 @@
 package com.example.orderproject.itemgroups;
 
 import com.example.orderproject.itemgroups.service.mappers.ItemGroupMappers;
-import com.example.orderproject.itemgroups.repositories.ItemGroupRepository;
 import com.example.orderproject.items.service.ItemService;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import static org.mockito.Mockito.verify;
 
 @ExtendWith(MockitoExtension.class)
 class ItemGroupServiceTest {
-    @Mock
-    private ItemGroupRepository repo;
 
     @Mock
     private ItemGroupMappers igMapper;
@@ -21,8 +16,6 @@ class ItemGroupServiceTest {
     @Mock
     private ItemService itemService;
 
-    @InjectMocks
-    private ItemGroupService itemGroupService;
 
 //    @Test
 //    void createOrderCreatesOrder(){

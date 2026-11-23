@@ -2,6 +2,7 @@ package com.example.orderproject.users.domain.persondetails;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
+import jakarta.validation.constraints.NotBlank;
 
 @Embeddable
 public class Address {
@@ -9,9 +10,11 @@ public class Address {
     private String street;
     @Column(name = "house_number")
     private String number;
-    @Column(name = "city")
+    @NotBlank
+    @Column(name = "city", nullable = false)
     private String city;
-    @Column(name = "zip_code")
+    @NotBlank
+    @Column(name = "zip_code", nullable = false)
     private String zipcode;
 
     public Address(String street, String number, String city, String zipcode) {

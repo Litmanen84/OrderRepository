@@ -2,6 +2,7 @@ package com.example.orderproject.users.repositories;
 
 import com.example.orderproject.users.domain.User;
 import com.example.orderproject.users.domain.persondetails.enums.Role;
+import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import java.util.Optional;
@@ -14,4 +15,7 @@ public interface UserRepository extends JpaRepository<User, Integer> {
     boolean existsByEmail(String email);
 
     boolean existsByRole(Role role);
+
+    @Transactional
+    void deleteByRole(Role role);
 }

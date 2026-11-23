@@ -2,7 +2,6 @@ package com.example.orderproject.orders.service;
 
 import com.example.orderproject.itemgroups.domain.ItemGroup;
 import com.example.orderproject.itemgroups.domain.dtos.CreateItemGroupDTO;
-import com.example.orderproject.itemgroups.repositories.ItemGroupRepository;
 import com.example.orderproject.items.domain.Item;
 import com.example.orderproject.items.service.ItemService;
 import com.example.orderproject.itemgroups.service.mappers.ItemGroupMappers;
