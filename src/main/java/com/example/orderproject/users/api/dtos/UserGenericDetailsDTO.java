@@ -1,21 +1,19 @@
 package com.example.orderproject.users.api.dtos;
 
-import java.util.UUID;
-
 public class UserGenericDetailsDTO {
-    private final UUID id;
+    private final Integer id;
     private final String firstname;
     private final String lastname;
     private final String email;
 
-    public UserGenericDetailsDTO(UUID id, String firstname, String lastname, String email) {
+    public UserGenericDetailsDTO(Integer id, String firstname, String lastname, String email) {
         this.id = id;
         this.firstname = firstname;
         this.lastname = lastname;
         this.email = email;
     }
 
-    public UUID getId() {
+    public Integer getId() {
         return id;
     }
 

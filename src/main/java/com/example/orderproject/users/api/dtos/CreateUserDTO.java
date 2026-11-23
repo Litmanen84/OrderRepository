@@ -4,24 +4,28 @@ import com.example.orderproject.users.domain.persondetails.Address;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 
 public class CreateUserDTO {
 
-    private String firstname;
-    private String lastname;
+    @NotBlank
+    final private String firstname;
+    @NotBlank
+    final private String lastname;
     @NotBlank
     @Email
     @Pattern(
             regexp = "^[A-Za-z0-9.]+@[A-Za-z0-9]+\\.[A-Za-z0-9]+$",
             message = "Email must have the form x@x.x using only letters and numbers"
     )
-    private String email;
+    final private String email;
     @NotBlank
     private String password;
     @Valid
-    private Address address;
-    @Valid
+    @NotNull
+    final private Address address;
+    @NotBlank
     private String phoneNumber;
 
     public CreateUserDTO(String firstname, String lastname, String email, String password, Address address, String phoneNumber) {

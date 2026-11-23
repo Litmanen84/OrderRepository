@@ -3,10 +3,8 @@ package com.example.orderproject.users.api.dtos;
 import com.example.orderproject.users.domain.persondetails.Address;
 import com.example.orderproject.users.domain.persondetails.enums.Role;
 
-import java.util.UUID;
-
 public class UserFullDetailsDTO {
-    private final UUID id;
+    private final Integer id;
     private final String firstname;
     private final String lastname;
     private final String email;
@@ -14,7 +12,7 @@ public class UserFullDetailsDTO {
     private final String phoneNumber;
     private final Role role;
 
-    public UserFullDetailsDTO(UUID id, String firstname, String lastname, String email, Address address, String phoneNumber, Role role) {
+    public UserFullDetailsDTO(Integer id, String firstname, String lastname, String email, Address address, String phoneNumber, Role role) {
         this.id = id;
         this.firstname = firstname;
         this.lastname = lastname;
@@ -24,7 +22,7 @@ public class UserFullDetailsDTO {
         this.role = role;
     }
 
-    public UUID getId() {
+    public Integer getId() {
         return id;
     }
 
