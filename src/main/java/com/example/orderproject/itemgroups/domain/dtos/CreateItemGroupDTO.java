@@ -3,21 +3,18 @@ package com.example.orderproject.itemgroups.domain.dtos;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Min;
 
-import java.util.UUID;
-
 public class CreateItemGroupDTO {
-    @NotNull
-    private UUID itemId;
+    private Integer itemId;
     @NotNull
     @Min(1)
     private Integer amount;
 
-    public CreateItemGroupDTO(UUID itemId, Integer amount) {
+    public CreateItemGroupDTO(Integer itemId, Integer amount) {
         this.itemId = itemId;
         this.amount = amount;
     }
 
-    public UUID getItemId() {
+    public Integer getItemId() {
         return itemId;
     }
     public Integer getAmount() {

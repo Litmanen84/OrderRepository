@@ -26,13 +26,13 @@ public class OrderController {
         this.securityService = securityService;
     }
 
-//    @PostMapping(consumes = "application/json", produces = "application/json")
-//    @ResponseStatus(HttpStatus.CREATED)
-//    public OrderDetailsDTO createOrder(
-//            @Valid @RequestBody CreateOrderDTO createOrderDTO,
-//            @RequestHeader(value = "Authorization", required = false) String auth
-//    ) {
-//        User user = securityService.validateAuthorization(auth, Feature.CREATE_ORDER);
-//        return orderService.createOrder(user, createOrderDTO);
-//    }
+    @PostMapping(consumes = "application/json", produces = "application/json")
+    @ResponseStatus(HttpStatus.CREATED)
+    public OrderDetailsDTO createOrder(
+            @Valid @RequestBody CreateOrderDTO createOrderDTO,
+            @RequestHeader(value = "Authorization", required = false) String auth
+    ) {
+        User user = securityService.validateAuthorization(auth, Feature.CREATE_ORDER);
+        return orderService.createOrder(user, createOrderDTO);
+    }
 }
