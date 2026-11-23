@@ -32,7 +32,14 @@ class UsersControllerTest {
             "81100"
     );
     private static final String USER_PHONE = "393472729";
-    private static final String ADMIN_CREDENTIALS = "test-admin@example.com:test-admin-password";
+    private static final String ADMIN_EMAIL =
+            System.getenv("TEST_ADMIN_EMAIL");
+
+    private static final String ADMIN_PASSWORD =
+            System.getenv("TEST_ADMIN_PASSWORD");
+
+    private static final String ADMIN_CREDENTIALS =
+            ADMIN_EMAIL + ":" + ADMIN_PASSWORD;
     private static String auth;
 
     @LocalServerPort

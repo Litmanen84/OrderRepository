@@ -24,7 +24,7 @@ public class AdminBootstrapService {
     @Transactional
     public void createAdminIfNotExists(String email, String password) {
 
-        if (userRepository.existsByRole(Role.ADMIN)) {
+        if (userRepository.existsByEmail(email)) {
             return;
         }
 
@@ -39,7 +39,7 @@ public class AdminBootstrapService {
                         "Caserta",
                         "81100"
                 ),
-                "123456789",
+                "123456780",
                 Role.ADMIN
         );
 
