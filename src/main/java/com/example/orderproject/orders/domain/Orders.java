@@ -19,7 +19,7 @@ public class Orders {
             precision = 10, scale = 2)
     private BigDecimal orderPrice;
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "USERS_ID", nullable = false)
+    @JoinColumn(name = "users_id", nullable = false)
     private User user;
     @Column(name = "created_at", nullable = false)
     private Instant createdAt;

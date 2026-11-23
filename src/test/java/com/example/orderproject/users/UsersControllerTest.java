@@ -1,15 +1,16 @@
-package com.example.orderproject.users;
-
-import org.springframework.boot.test.context.SpringBootTest;
-
-
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class UsersControllerTest {
-
+//package com.example.orderproject.users;
+//
+//import com.example.orderproject.users.service.mappers.UserMapper;
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.boot.test.context.SpringBootTest;
+//import org.springframework.boot.test.web.server.LocalServerPort;
+//
+//
+//@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+//class UsersControllerTest {
+//
 //    @LocalServerPort
 //    private int port;
-//    @Autowired
-//    private UserDB userDB;
 //    @Autowired
 //    private UserMapper mapp;
 //
@@ -409,4 +410,4 @@ class UsersControllerTest {
 //                .then()
 //                .statusCode(401);
 //    }
-}
+//}
